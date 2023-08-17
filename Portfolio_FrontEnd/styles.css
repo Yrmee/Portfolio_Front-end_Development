@@ -44,7 +44,7 @@ body {
     text-decoration: none;
     color: var(--white);
     transition: background 0.5s;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 2px;
     font-size: 0.9em;
 }
@@ -398,6 +398,8 @@ p {
     }
     form input, form textarea {
         width: 100%;
+        border: 0;
+        outline: none;
         background: var(--nav_mobile);
         backdrop-filter: blur(2px);
         padding: 15px;
@@ -405,6 +407,8 @@ p {
         border-radius: 6px;
         letter-spacing: 2px;
         font-weight: 200;
+        resize: none;
+        font-family: "Poppins";
     }
     .contact-form {
         margin-top: 20px;
@@ -745,6 +749,8 @@ p {
     form input, form textarea {
         text-align: left;
         width: 90%;
+        border: 0;
+        outline: none;
         background: var(--nav_mobile);
         backdrop-filter: blur(2px);
         padding: 15px;
@@ -752,6 +758,8 @@ p {
         border-radius: 6px;
         letter-spacing: 2px;
         font-weight: 200;
+        resize: none;
+        font-family: "Poppins";
     }
 
     /* FOOTER - SMALL TABLETS */
@@ -1139,6 +1147,8 @@ p {
     }
     form input, form textarea {
         text-align: left;
+        border: 0;
+        outline: none;
         width: 100%;
         background: var(--nav_mobile);
         backdrop-filter: blur(1px);
@@ -1147,6 +1157,8 @@ p {
         border-radius: 6px;
         letter-spacing: 2px;
         font-weight: 200;
+        resize: none;
+        font-family: "Poppins";
     }
 
     /* FOOTER */
@@ -1535,6 +1547,8 @@ p {
     form input, form textarea {
         text-align: left;
         width: 100%;
+        border: 0;
+        outline: none;
         background: var(--nav_mobile);
         backdrop-filter: blur(2px);
         padding: 10px;
@@ -1542,6 +1556,8 @@ p {
         border-radius: 6px;
         letter-spacing: 2px;
         font-weight: 200;
+        resize: none;
+        font-family: "Poppins";
     }
 
     /* FOOTER */
