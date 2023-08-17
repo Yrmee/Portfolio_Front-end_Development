@@ -23,7 +23,7 @@ One of the million things I'm interested in is the galaxy, the universe and ever
 ## Sources
 * [Planet Earth Video](https://www.freepik.com/free-video/the-planet-earth-rotates-in-star-filled-space-loop_179477#position=45&term=space&from_view=keyword)
 * [Rocket icon](https://www.flaticon.com/free-icons/rocket)
-* [Google Font Family](https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap)
+* [Google Font Family](https://fonts.google.com/specimen/Poppins)
 
 
 ## Project Visuals
