@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "disown-opener": "off",
+    "axe/name-role-value": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "width: fit-content",
+          "backdrop-filter",
+          "user-select"
+        ]
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "no-inline-styles": "off"
+  }
+}

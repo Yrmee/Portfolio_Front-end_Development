@@ -1,0 +1,1571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --black: #4F200D;
+    --white: #fff;
+    --detail_sub_color: rgb(241, 166, 97);
+    --detail_sub_color: #FFD95A;
+    --tab_title_color: #b54769;
+    --p_text_color: rgb(70, 17, 17);
+    --services_div_color: #262626;
+    --layer_background: linear-gradient(rgba(255, 255, 255, 0.6), #FFD95A);
+    --white_opacity: rgba(246, 241, 233, 0.626);
+    --nav_mobile: rgba(246, 241, 233, 0.86);
+}
+
+/* BASE STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    background: url(./images/coffee_background_small.jpg) no-repeat center left fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    min-height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--detail_sub_color);
+    background: rgba(211, 163, 6, 0.693);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--white);
+    transition: background 0.5s;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+}
+.btn:hover {
+    background: rgba(211, 163, 6);
+}
+
+h1 {
+    font-size: 1.6em;
+}
+h2, h3 {
+    font-size: 1.2em;
+}
+p {
+    font-size: 1.1em;
+}
+
+.container {
+    padding: 3% 5%;
+}
+
+#header, #about, #portfolio {
+    min-height: 100vh;
+    margin-bottom: 25vh;
+}
+#services {
+    min-height: 100vh;
+}
+#contact {
+    min-height: 70vh;
+}
+
+.logo {
+    width: 40px;
+    filter: invert(1);
+}
+
+.header-text {
+    color: white;
+}
+.header-text h1 span {
+    color: var(--detail_sub_color);
+    font-size: 2em;
+    font-weight: 500;
+}
+.header-text .job-title {
+    margin-top: -10px;
+    color: var(--detail_sub_color);
+    font-size: 1em;
+}
+
+#about {
+    background-color: var(--nav_mobile);
+    background-color: rgba(247, 238, 228, 0.82);
+    color: var(--p_text_color);
+}
+
+
+/* MOBILE DEVICES */
+@media only screen and (min-width: 300px) and (max-width: 514px) {
+
+    html {
+        background: url(./images/coffee_background_small.jpg) no-repeat right fixed;
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    nav i.fa-solid.fa-bars {
+        color:white;
+        font-size: 60px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 30px;
+    }
+    nav ul {
+        background: rgba(255, 255, 255, 0.626);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        right: -200px; /* set from 0 to -200px to make it hidden */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        color:rgb(70, 17, 17);
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul li a {
+        color:rgb(70, 17, 17);
+        color:rgba(70, 17, 17, 0.705);
+        font-size: 1.4em;
+    }
+
+    .header-text {
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 10%;
+    }
+    .header-text h1 span {
+        letter-spacing: -1px;
+    }
+
+    /* ABOUT SECTION - MOBILE DEVICES */
+    .row {
+        letter-spacing: 1px;
+    }
+    .about-col-left img {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .about-col-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--black);
+        font-size: 3.6em;
+        padding-top: 10px;
+        margin-inline: 1rem;
+    }
+    .about-col-right .intro-text {
+        font-size: 0.8em;
+        margin-inline: 1rem;
+        font-weight: 300;
+        line-height: 1.7em;
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 40px 0 40px;
+        justify-content: space-evenly;
+        font-size: 0.9em;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    .tab-links {
+        position: relative;
+    }
+    .tab-links::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: #DC9E41;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transition: 0.5s;
+    }
+    .tab-links.active-link::after {
+        width: 110%;
+    }
+    
+    .tab-contents ul li {
+        list-style: none;
+        margin: 20px 0;
+        margin-inline: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.7em;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    
+    .tab-contents ul li span {
+        color: #c68118;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 2.2em;
+    }
+
+    .tab-skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        color:rgba(70, 17, 17, 0.789);
+    }
+    .tab-skills-icons li i {
+        font-size: 2em;
+        margin: -10px;
+    }
+    
+    .tab-contents {
+        display: none;
+    }
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+
+
+    /* SERVICES SECTION - MOBILE DEVICES */
+    .service-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 3em;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+        grid-gap: 40px;
+        margin-top: 15px;
+    }
+    .services-list div {
+        background: rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        padding: 18px 20px;
+        border-radius: 20px;
+        color: white;
+    }
+    .services-list div i {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .services-list div h2 {
+        font-size: 1.1em;
+        letter-spacing: 2px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        line-height: 1.5em;
+    }
+    .services-list div p {
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        line-height: 1.7em;
+        font-weight: 200;
+        margin-bottom: 25px;
+    }
+    .services-list div ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .services-list div ul li i {
+        font-size: 1.7em;
+    }
+
+
+    /* PORTFOLIO SECTION - MOBILE DEVICES */
+    .portfolio-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 2.8em;
+    }
+
+    .portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+        grid-gap: 2em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .portfolio-list div {
+        background:rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        border-radius: 10px;
+        padding: 18px 20px;
+        color: white;
+    }
+    .portfolio-list div i {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .portfolio-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        letter-spacing:2px;
+        line-height: 1.7em;
+        margin-bottom: 15px;
+    }
+    .portfolio-list div p {
+        font-size: 0.9em;
+        font-weight: 200;
+        letter-spacing: 1px;
+        line-height: 1.7em;
+        margin-bottom: 10px;
+    }
+    .portfolio-list div a {
+        text-decoration: none;
+        font-style: italic;
+        color: var(--detail_sub_color);
+        font-size: 0.9em;
+        margin-top: 10px;
+        display: inline-block;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+
+
+    /* CONTACT SECTION - MOBILE DEVICES */
+    .contact-left h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 2.5em;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .contact-left p {
+        color: white;
+        font-weight: 200;
+        font-size: 1em;
+        line-height: 2.4em;
+    }
+    .contact-left p span {
+        color: rgba(241, 205, 86, 0.838);
+    }
+    i.fa-solid.fa-location-dot {
+        padding: 4px 3px;
+    }
+    .social-icons a {
+        text-decoration: none;
+        font-size: 50px;
+        color: rgba(241, 205, 86, 0.838);
+        display: inline-block;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+    .contact-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 2.5em;
+        font-weight: 500;
+        text-align: center;
+    }
+    form input, form textarea {
+        width: 100%;
+        background: var(--nav_mobile);
+        backdrop-filter: blur(2px);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 6px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: var(--white_opacity);
+        backdrop-filter: blur(12px);
+        font-weight: 200;
+        margin-top: 50px;
+        color: rgba(70, 17, 17, 0.789);
+        font-size: 0.9em;
+    }
+    
+    .copyright i, .copyright span {
+        color: var(--detail_sub_color);
+    }
+    .copyright span {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* SMALL TABLETS */
+@media only screen and (min-width: 515px) and (max-width: 768px) {
+
+    html {
+        background: url(./images/background.jpg) no-repeat center right fixed;
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    nav i.fa-solid.fa-bars {
+        color: white;
+        font-size: 80px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 30px;
+    }
+    nav ul {
+        background: rgba(255, 255, 255, 0.626);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        color:rgb(70, 17, 17);
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul li a {
+        color:rgb(70, 17, 17);
+        font-size: 1.2em;
+    }
+
+    .header-text {
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 7%;
+    }
+    .header-text .quote {
+        font-size: 1.3em;
+        font-weight: 200;
+    }
+    .header-text h1 {
+        font-size: 2.5em;
+        font-weight: 200;
+    }
+    .header-text h1 span {
+        letter-spacing: -1px;
+    }
+    .header-text .job-title {
+        font-size: 1.1em;
+        font-weight: 200;
+        margin-top: -25px;
+    }
+
+
+    /* ABOUT SECTION - SMALL TABLETS */
+    .row {
+        letter-spacing: 1px;
+    }
+    .about-col-left img {
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+
+    .about-col-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--black);
+        font-size: 4em;
+        font-weight: 500;
+        padding-top: 20px;
+        margin-inline: 1rem;
+        text-align: center;
+    }
+    .about-col-right .intro-text {
+        font-size: 0.8em;
+        font-weight: 300;
+        margin-inline: 1rem;
+        margin-top: 20px;
+        line-height: 1.6em;
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 40px 0 40px;
+        letter-spacing: 2px;
+        font-size: 0.9em;
+    }
+    .tab-links {
+        margin-right: 50px;
+        font-weight: 400;
+        position: relative;
+    }
+    .tab-links::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: #DC9E41;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    .tab-links.active-link::after {
+        width: 110%;
+    }
+    
+    .tab-contents ul li {
+        margin: 20px 0;
+        margin-inline: 1rem;
+        font-size: 0.8em;
+        font-weight: 300;
+        line-height: 1.7em;
+    }
+    .tab-contents ul li span {
+        color: #c68118;
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 1.8em;
+    }
+
+    .tab-skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        color:rgba(70, 17, 17, 0.743);
+    }
+    .tab-skills-icons li i {
+        font-size: 2.3em;
+        margin: -5px;
+    }
+    
+    .tab-contents {
+        display: none;
+    }
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+    /* SERVICES SECTION - SMALL TABLETS */
+    .service-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 8vw;
+        font-weight: 500;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+        grid-gap: 40px;
+        margin-top: 15px;
+    }
+    .services-list div {
+        background: rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        padding: 40px;
+        border-radius: 30px;
+        color: white;
+    }
+    .services-list div i {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .services-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    .services-list div p {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        font-weight: 200;
+        margin-bottom: 30px;
+        line-height: 1.7em;
+    }
+    .services-list div ul li {
+        display: inline-block;
+        margin-right: 18px;
+    }
+    .services-list div ul li i {
+        font-size: 1.5em;
+    }
+
+    /* PORTFOLIO SECTION - SMALL TABLETS */
+    .portfolio-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 8vw;
+        font-weight: 500;
+    }
+
+    .portfolio-list {
+        display: grid;
+        grid-gap: 2em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .portfolio-list div {
+        background:rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        border-radius: 40px;
+        padding: 30px;
+        color: white;
+    }
+    .portfolio-list div i {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .portfolio-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    .portfolio-list div p {
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        font-size: 0.8em;
+        line-height: 1.7em;
+    }
+    .portfolio-list div a {
+        text-decoration: none;
+        font-style: italic;
+        color: var(--detail_sub_color);
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-size: 0.8em;
+    }
+
+    /* CONTACT SECTION  - SMALL TABLETS */
+    .contact-left h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 3em;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .contact-left p {
+        color: white;
+        font-weight: 200;
+        font-size: 1em;
+        line-height: 2.1em;
+    }
+    .contact-left p span {
+        margin-right: 20px;
+        color: rgba(241, 205, 86, 0.838);
+    }
+    i.fa-solid.fa-location-dot {
+        padding: 4px 3px;
+    }
+    .social-icons a {
+        text-decoration: none;
+        font-size: 50px;
+        color: rgba(241, 205, 86, 0.838);
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    .btn.contact-form {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .contact-right form {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 3em;
+        font-weight: 500;
+        text-align: center;
+    }
+    form input, form textarea {
+        text-align: left;
+        width: 90%;
+        background: var(--nav_mobile);
+        backdrop-filter: blur(2px);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 6px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+
+    /* FOOTER - SMALL TABLETS */
+    .copyright {
+        width: 100%;
+        text-align: center;
+        background: var(--white_opacity);
+        backdrop-filter: blur(12px);
+        font-weight: 200;
+        margin-top: 50px;
+        color: rgba(70, 17, 17, 0.789);
+        font-size: 0.8em;
+    }
+    .copyright i, .copyright span {
+        color: var(--detail_sub_color);
+    }
+    .copyright span {
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* LARGE TABLETS & LAPTOPS */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    html {
+        background: url(./images/background.jpg) no-repeat center right fixed;
+        background-size: cover;
+    }
+
+    nav .fa-solid {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-weight: 200;
+        letter-spacing: 3px;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+        filter: invert(1);
+    }
+
+    nav ul {
+        backdrop-filter: blur(25px);
+        border-radius: 7px;
+    }
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 5px 12px;
+    }
+    nav ul li a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+        position: relative;
+        cursor: pointer;
+    }
+    nav ul li a::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: var(--detail_sub_color);
+        background: #ffd95ac6;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        transition: 0.5s;
+    }
+    nav ul li a:hover::after {
+        width: 110%;
+    }
+
+    .header-text {
+        display: block;
+        position: absolute;
+        top: 62%;
+        left: 7%;
+    }
+    .header-text .quote {
+        font-size: 1.3em;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+    .header-text h1 {
+        font-size: 2.8em;
+        font-weight: 200;
+    }
+    .header-text h1 span {
+        margin-left: -10px;
+    }
+    .header-text .job-title {
+        font-size: 1em;
+        font-weight: 200;
+        margin-top: -25px;
+        letter-spacing: 1px;
+    }
+
+
+
+    /* ABOUT SECTION - LARGE TABLETS & LAPTOPS */
+    .row {
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .about-col-left {
+        flex-basis: 35%;
+    }
+
+    .about-col-left img {
+        width: 100%;
+        margin-left: auto;
+        margin-top: 20px;
+        padding-top: 40px;
+    }
+    .about-col-left img.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .about-col-right {
+        flex-basis: 60%;
+    }
+
+    .about-col-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--black);
+        font-size: 7vw;
+        font-weight: 500;
+        padding-top: 10px;
+    }
+    .about-col-right .intro-text {
+        font-size: 0.8em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 1.6em;
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 40px 0 40px;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+    .tab-links {
+        margin-right: 50px;
+        cursor: pointer;
+        position: relative;
+    }
+    .tab-links::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: #DC9E41;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    .tab-links.active-link::after {
+        width: 110%;
+    }
+    
+    .tab-contents ul li {
+        margin: 20px 0;
+        margin-inline: 1rem;
+        font-size: 0.8em;
+        font-weight: 300;
+        line-height: 1.6em;
+    }
+    .tab-contents ul li span {
+        color: #c68118;
+        font-size: 1.1em;
+        font-weight: 300;
+        letter-spacing: 2px;
+        line-height: 2em;
+    }
+    
+    .tab-skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        color:rgba(70, 17, 17, 0.743);
+    }
+    .tab-skills-icons li i {
+        font-size: 2.1em;
+        margin-left: -10px;
+    }
+
+    .tab-contents {
+        display: none;
+    }
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+
+    /* SERVICES SECTION - LARGE TABLETS & LAPTOPS */
+    .service-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 5vw;
+        font-weight: 500;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-gap: 15px;
+        margin-top: 15px;
+    }
+    .services-list div {
+        background: rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        padding: 20px;
+        border-radius: 30px;
+        color: white;
+    }
+    .services-list div i {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .services-list div h2 {
+        font-size: 1em;
+        font-weight: 300;
+        margin-bottom: 15px;
+        line-height: 1.4em;
+        letter-spacing: 2px;
+    }
+    .services-list div p {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        font-weight: 200;
+        margin-bottom: 18px;
+        line-height: 1.5em;
+    }
+    .services-list div ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .services-list div ul li i {
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+
+
+    /* PORTFOLIO SECTION - LARGE TABLETS & LAPTOPS */
+    .portfolio-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 5vw;
+        font-weight: 500;
+    }
+
+    .portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .portfolio-list div {
+        background:rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        border-radius: 40px;
+        padding: 30px;
+        color: white;
+    }
+    .portfolio-list div i {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .portfolio-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        line-height: 1.4em;
+    }
+    .portfolio-list div p {
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+    .portfolio-list div a {
+        text-decoration: none;
+        font-style: italic;
+        color: var(--detail_sub_color);
+        font-size: 0.8em;
+        display: inline-block;
+        letter-spacing: 2px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+
+
+    /* CONTACT SECTION */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .contact-left {
+        flex-basis: 40%;
+    }
+    .contact-left h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 5vw;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    .contact-left p {
+        color: white;
+        font-weight: 200;
+        font-size: 1em;
+        line-height: 2.1em;
+    }
+    .contact-left p span {
+        font-size: 1.2em;
+        margin-right: 20px;
+        color: rgba(241, 205, 86, 0.838);
+    }
+    i.fa-solid.fa-location-dot {
+        padding: 4px 3px;
+    }
+    .social-icons {
+        margin-top: 30px;
+    }
+    .social-icons a {
+        text-decoration: none;
+        font-size: 50px;
+        color: rgba(241, 205, 86, 0.838);
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .social-icons a:hover {
+        color: var(--black);
+        transform: translateY(-5px);
+    }
+    .btn.contact-form {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .contact-right {
+        flex-basis: 60%;
+    }
+    .contact-right form {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 5vw;
+        font-weight: 400;
+    }
+    form input, form textarea {
+        text-align: left;
+        width: 100%;
+        background: var(--nav_mobile);
+        backdrop-filter: blur(1px);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 6px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+
+    /* FOOTER */
+    .copyright {
+        background: var(--white_opacity);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        margin-top: 300px;
+    }
+    .copyright p {
+        color: rgba(70, 17, 17, 0.789);
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+    .copyright i, .copyright span {
+        color: var(--detail_sub_color);
+    }
+    .copyright span {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+/* DESKTOPS */
+
+@media only screen and (min-width: 1025px) {
+
+    html {
+        background: url(./images/background.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        filter: invert(1);
+    }
+
+    nav .fa-solid {
+        display: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-weight: 200;
+        letter-spacing: 3px;
+    }
+    nav ul {
+        backdrop-filter: blur(25px);
+        border-radius: 7px;
+    }
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 5px 12px;
+    }
+    
+    nav ul li a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    nav ul li a::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: var(--detail_sub_color);
+        background: #ffd95ac6;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        transition: 0.5s;
+    }
+    
+    nav ul li a:hover::after {
+        width: 110%;
+    }
+
+    .header-text {
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+    }
+    .header-text .quote {
+        font-size: 1.3em;
+        font-weight: 200;
+    }
+    .header-text h1 {
+        font-size: 3.4em;
+        font-weight: 200;
+    }
+    .header-text h1 span {
+        margin-left: -10px;
+    }
+    .header-text .job-title {
+        font-size: 1em;
+        font-weight: 200;
+        margin-top: -35px;
+    }
+
+
+    /* ABOUT SECTION - DESKTOPS */
+
+    .row {
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .about-col-left {
+        flex-basis: 40%;
+    }
+
+    .about-col-left img {
+        width: 80%;
+        margin-left: auto;
+        margin-top: 20px;
+        padding-top: 40px;
+    }
+    .about-col-left img.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .about-col-right {
+        flex-basis: 55%;
+    }
+
+    .about-col-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--black);
+        font-size: 4em;
+        font-weight: 500;
+        padding-top: 10px;
+    }
+    .about-col-right .intro-text {
+        font-size: 0.8em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 1.6em;
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 40px 0 40px;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        font-weight: 400;
+    }
+    .tab-links {
+        margin-right: 50px;
+        cursor: pointer;
+        position: relative;
+    }
+    .tab-links::after {
+        content: " ";
+        width: 0;
+        height: 3px;
+        background: #DC9E41;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        transition: 0.5s;
+    }
+    .tab-links.active-link::after {
+        width: 110%;
+    }
+    
+    .tab-contents ul li {
+        list-style: none;
+        margin: 20px 0;
+        margin-inline: 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        line-height: 1.6em;
+        font-weight: 300;
+    }
+    
+    .tab-contents ul li span {
+        color: #c68118;
+        font-size: 1.1em;
+        letter-spacing: 2px;
+        line-height: 2em;
+        font-weight: 300;
+    }
+
+    .tab-skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        color:rgba(70, 17, 17, 0.743);
+    }
+    .tab-skills-icons li i {
+        font-size: 2.1em;
+        margin: -5px;
+    }
+    
+    .tab-contents {
+        display: none;
+    }
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+
+    /* SERVICES SECTION - DESKTOPS */
+    .service-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 4.3em;
+        font-weight: 500;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 15px;
+        margin-top: 20px;
+    }
+    .services-list div {
+        background: rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        padding: 25px;
+        border-radius: 30px;
+        color: white;
+    }
+    .services-list div i {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .services-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        letter-spacing: 2px;
+    }
+    .services-list div p {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        font-weight: 200;
+        margin-bottom: 30px;
+        line-height: 1.7em;
+    }
+    .services-list div ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .services-list div ul li i {
+        font-size: 1.3em;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-title {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 4em;
+        font-weight: 500;
+    }
+
+    .portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .portfolio-list div {
+        background:rgba(70, 17, 17, 0.743);
+        backdrop-filter: blur(12px);
+        border-radius: 40px;
+        padding: 30px;
+        color: white;
+    }
+    .portfolio-list div i {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .portfolio-list div h2 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        line-height: 1.1em;
+    }
+    .portfolio-list div p {
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        font-size: 0.8em;
+        line-height: 1.7em;
+    }
+    .portfolio-list div a {
+        text-decoration: none;
+        font-style: italic;
+        color: var(--detail_sub_color);
+        display: inline-block;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+
+    /* CONTACT SECTION - DESKTOPS */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .contact-left {
+        flex-basis: 50%;
+    }
+    .contact-left h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 4em;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .contact-left p {
+        color: white;
+        font-weight: 200;
+        font-size: 1em;
+        line-height: 2.5em;
+    }
+    .contact-left p span {
+        font-size: 1.4em;
+        margin-right: 20px;
+        color: rgba(241, 205, 86, 0.838);
+    }
+    i.fa-solid.fa-location-dot {
+        padding: 4px 3px;
+    }
+    .social-icons {
+        margin-top: 30px;
+    }
+    .social-icons a {
+        text-decoration: none;
+        font-size: 50px;
+        color: rgba(241, 205, 86, 0.838);
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .social-icons a:hover {
+        color: var(--black);
+        transform: translateY(-5px);
+    }
+    .btn.contact-form {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .contact-right {
+        flex-basis: 50%;
+    }
+    .contact-right form {
+        width: 90%;
+        text-align: center;
+    }
+    .contact-right h2 {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 4em;
+        font-weight: 400;
+        text-align: left;
+    }
+    form input, form textarea {
+        text-align: left;
+        width: 100%;
+        background: var(--nav_mobile);
+        backdrop-filter: blur(2px);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 6px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+
+    /* FOOTER */
+    .copyright {
+        background: var(--white_opacity);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        margin-top: 100px;
+    }
+    .copyright p {
+        color: rgba(70, 17, 17, 0.789);
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+    .copyright i, .copyright span {
+        color: var(--detail_sub_color);
+    }
+    .copyright span {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* EXTRA LARGE SCREENS - TV */

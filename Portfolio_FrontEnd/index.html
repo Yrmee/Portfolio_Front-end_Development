@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title> Personal Portfolio Website </title>
+
+    <script src="https://kit.fontawesome.com/1bef4ce688.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu" class="navbar">
+                    <li> <a href="#header"> Home </a> </li>
+                    <li> <a href="#about"> About </a> </li>
+                    <li> <a href="#services"> Skills </a> </li>
+                    <li> <a href="#portfolio"> Portfolio </a> </li>
+                    <li> <a href="#contact"> Contact </a> </li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <div>
+                    <h2 class="quote"> iTurn Coffee into &lt;/Code&gt; </h2>
+                </div>
+                <div>
+                    <h1> Hi, I'm<span>Yrja</span>. </h1>
+                    <p class="job-title"> Full Stack Developer </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------- about section ------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-left">
+                    <img class="sticky" src="./images/user_round.png" alt="user_photo">
+                </div>
+                <div class="about-col-right">
+                    <h2 class="sub-title"> Hi! </h2>
+                    <p class="intro-text"> My name is Yrja, born and raised Dutch and currently living in beautiful Amsterdam.
+                        I am a recently graduated Full Stack Developer, 
+                        of which Front-end Development is the direction I want to focus on full time.
+                        <br><br>
+                        About two years ago I took the step to retrain from professional Barista to Full Stack (web) Developer. 
+                        For this I followed the Front-end and Back-end Development courses at Winc Academy and recently successfully completed them.
+                        <br><br>
+                        My interest in Code&Design has led my new career choice in this direction and is the reason why I am seeking 
+                        for an internship or traineeship to further develop myself as a Junior Front-end Developer. <br><br>
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')"> Skills </p>
+                        <p class="tab-links" onclick="openTab('education')"> Education </p>
+                        <p class="tab-links" onclick="openTab('interests')"> Interests </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span> Front-end Development </span><br> 
+                                Building Web/App interfaces.
+                                <ul class="tab-skills-icons">
+                                    <li title="HTML "><i class="fa-brands fa-html5"></i></li>
+                                    <li title="CSS "><i class="fa-brands fa-css3-alt"></i></li>
+                                    <li title="JavaScript "><i class="fa-brands fa-square-js"></i></li>
+                                    <li title="React "><i class="fa-brands fa-react"></i></li>
+                                    <li title="git "><i class="fa-brands fa-square-git"></i></li>
+                                    <li title="Command Line"><i class="fa-solid fa-terminal"></i></li>
+                                </ul>
+                            </li>
+
+                            <li> <span> Back-end Development </span><br> 
+                                Building Web/Apps, connecting Databases and Web Deployment.
+                                <ul class="tab-skills-icons">
+                                    <li title="git "><i class="fa-brands fa-square-git"></i></li>
+                                    <li title="Python "><i class="fa-brands fa-python"></i></li>
+                                    <li title="SQL "><i class="fa-solid fa-database"></i></li>
+                                    <li title="Ubuntu"><i class="fa-brands fa-ubuntu"></i></li>
+                                    <li title="Linux"><i class="fa-brands fa-linux"></i></li>
+                                    <li title="Command Line "><i class="fa-solid fa-terminal"></i></li>
+                                </ul>
+                            </li>
+
+                            <li> <span> Web Design </span><br> 
+                                Designing Web/App interfaces with Design program Figma. 
+                                <ul class="tab-skills-icons">
+                                    <li title="Figma "><i class="fa-brands fa-figma"></i></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span> 2022-2023 <br> </span> Back-end Development <br> Winc Academy </li>
+                            <li> <span> 2022 <br> </span> Web Design Fundamentals course <br> Winc Academy </li>
+                            <li> <span> 2021-2022 <br> </span> Front-end Development <br> Winc Academy </li>
+                            <li> <span> 2021 <br> </span> HTML, CSS and Bootstrap course <br> TechGrounds </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li> <span> Exploring the Globe </span><br>
+                                Travelling is something I really love to do.
+                                I like to discover unique places that earth has given us.
+                                Mountains and high cliffs are my favourite places to visit when I travel.
+                                Madeira Island is my ultimate favorite so far, the diversity of nature is just perfect for me.
+                                My visit to La Palma, Tenerife and La Gomera has made me very interested in volcanism these days.
+                                I secretly hope to experience an eruption from a safe distance one day. <br><br>
+                                Next trips: Norway & Scotland.
+                            </li>
+
+                            <li> <span> Body & Mind </span><br> 
+                                Rocycle (indoor cycling) is my every day physical activity and mindfulness. 
+                                It creates mental clearity and sharps my concentration to stay focussed on my goals for the day.
+                            </li>
+
+                            <li> <span> Creativity & Engineering </span><br>
+                                I like to draw and paint. I don't have a specific theme or style that I like to draw, 
+                                it often depends on the moment. In the near future I would like to learn and create digital art 
+                                that I can use in my personal coding projects.<br><br>
+
+                                I express my creativity in several things; interior styling, fashion, 
+                                original gifts for friends and writing. <br><br>
+
+                                In my spare time I like to build construction content for the Sims 4 Online Community.
+                                My engineering skills comes in very handy sometimes during complicated build-creations.
+                                People from the community can download my content and use it in their Sims game.
+                            </li>
+
+                            <li> <span> Social & Happy </span><br>
+                                I'm a very venturous person, I like to go out and do things.
+                                Such as going out for dinners and discovering new restaurants in town,
+                                Hanging upside down on a roller coaster at an amusement park or just visiting art museums and expos. 
+                                Dancing at music festivals, attending football matches at my club's stadium and getting together 
+                                with my friends for Formula1 races are the best. <br><br>
+
+                                As a huge animal lover, I like to work for charity. I collect donations from friends and family in 
+                                the form of pet food for local animal shelters once in a while. <br><br>
+                                
+                                I am a cat-mom of two cats, two sisters, which I both adopted from a foundation dedicated to rescuing stray cats from the streets.
+                                It is satisfying to see that they are still growing every day in the socialization process with humans. 
+                                It makes me happy that I can offer them a safe home and pamper them with my love.
+                                Unfortunately I don't have enough space at home to adopt more cats, because I would like to help them all. <br><br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------- services section ------->
+    <div id="services">
+        <div class="container">
+            <h2 class="service-title"> My Skills </h2>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2> Web Design </h2>
+                    <p> Designing with UX Design program Figma, 
+                        to create great online experiences and bringing my creative concepts to life. 
+                        I know how to make an impact by applying product improvements that 
+                        lead to more converting customers and higher customer satisfaction, 
+                        with my knowledge of UX- / Digital- and Web Design Basics.
+                    </p>
+                    <ul>
+                        <li title="Figma "><i class="fa-brands fa-figma"></i></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2> Front-end Development </h2>
+                    <p> My core business is building modern websites and web apps with HTML, 
+                        CSS and JavaScript. 
+                        I am still learning to master framework React that hopefully makes 
+                        my life easier to write fast and smooth working websites. 
+                        As a creative person and visual thinker, my goal with Front-end Development 
+                        is to turn your or my Design into Code. 
+                    </p>
+                    <ul>
+                        <li title="HTML "><i class="fa-brands fa-html5"></i></li>
+                        <li title="CSS "><i class="fa-brands fa-css3-alt"></i></li>
+                        <li title="JavaScript "><i class="fa-brands fa-square-js"></i></li>
+                        <li title="React "><i class="fa-brands fa-react"></i></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <i class="fa-sharp fa-solid fa-database"></i>
+                    <h2> Back-end Development </h2>
+                    <p> Writing code for (web) applications with my Python skills, 
+                        building applications in the cloud by using Python’s extension Flask 
+                        and deploy them online. I'm aware of what the cloud is, 
+                        to install self-written software on it and how to maintain afterwards. 
+                        With database language SQL I know how to work with the storage and the use of data of the cloud from Python. 
+                    </p>
+                    <ul>
+                        <li title="git "><i class="fa-brands fa-square-git"></i></li>
+                        <li title="Python "><i class="fa-brands fa-python"></i></li>
+                        <li title="SQL "><i class="fa-solid fa-database"></i></li>
+                        <li title="Ubuntu"><i class="fa-brands fa-ubuntu"></i></li>
+                        <li title="Linux"><i class="fa-brands fa-linux"></i></li>
+                        <li title="Command Line "><i class="fa-solid fa-terminal"></i></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!------- portfolio section ------->
+<div id="portfolio">
+    <div class="container">
+        <h2 class="portfolio-title"> My Portfolio </h2>
+        <div class="portfolio-list">
+            <div>
+                <i class="fa-solid fa-chart-column"></i>
+                <h2> Student Dashboard </h2>
+                <p> School Project, Final Exam of my Front-end Development course: Student Dashboard.
+                    Create a dashboard for professors to keep track of their students study progress displayed with functional graphs and tables linked 
+                    to an CSV database. I am really satisfied with the result I have accomplished for 
+                    this School Project.
+                </p>
+                <a href="https://github.com/Yrmee/Student_Dashboard" target="_blank"> Show Project on Github </a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2> CD on a VPS.</h2>
+                <p> School Project, Final Exam of my Back-end Development course: Flask App Web Hosting.
+                    Continuous Deployment (CD) on a Virtual Private Server (VPS) with SSH (Secure Shell).
+                    With Github Actions, I automated tasks such as Running Tests on code everytime a new commit is 
+                    pushed to Github to make sure everyting is working.
+                </p>
+                <a href="https://github.com/Yrmee/flask_app" target="_blank"> Show Project on Github </a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-list-check"></i>
+                <h2> To Do List App </h2>
+                <p> School Project, a React To Do App that will allow the user to add a task to a list of to-do items. 
+                    The user will be able to mark it as completed once it's done and clear the list of tasks
+                    marked as completed all in once.
+                    There will be a count that will be displaying both the pending and completed tasks.
+                </p>
+                <a href="#" target="_blank"> Show Project on GitHub </a>
+            </div>
+        </div>
+
+        <div class="portfolio-list">
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2> Video Landing page </h2>
+                <p> A self-created project for this portfolio is a video animated background web page with an educational
+                    purpose. One of the billion things I am interested in is the galaxy and universe, 
+                    with this subject I could really bring the feeling of being there.
+                </p>
+                <a href="projects/VideoBackground/index.html" target="_blank"> Show Project </a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <h2> CSS Animations </h2>
+                <p> An additional feature with CSS are animated texts and images as soon as the web page loads. 
+                    To showcase what I can do with CSS animations for a web page or web application, 
+                    I created this fictional Food Blog project as an example.  </p>
+                <a href="projects/CSS_Animations/index.html" target="_blank"> Show Project </a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-rectangle-ad"></i>
+                <h2> Model Box </h2>
+                <p> It is impossible to imagine the website world without pop-up banners.
+                    Out of curiousity how they are build and work, I created this Model Box for a Webshop
+                    which appears as soon as the mouse leaves the browser window and returns.
+                </p>
+                <a href="projects/model_box/index.html" target="_blank"> Show Project </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------- contact section ------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="contact-left">
+                    <h2 class="sub-title"> Get in Touch! </h2>
+                    <p> <span> <i class="fa-solid fa-location-dot"> </i> </span> Amsterdam, NL </p>
+                    <p> <span> <i class="fa-solid fa-envelope"> </i> </span> contact@email.com </p>
+                    <p> <span> <i class="fa-solid fa-phone"> </i> </span> +31 1 234 56 789 </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/yrja-e-37972b205/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+                        <a href="https://github.com/Yrmee" target="_blank"> <i class="fa-brands fa-github"></i> </a>
+                    </div>
+                    <a id="downloadCV" href="images/download_cv.pdf"  download class="btn contact-form"> Download CV </a>
+                </div>
+
+                <div class="contact-right">
+                    <h2 class="sub-title"> DM Me. </h2>
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your e-mail" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button id="submitBtn" type="submit" class="btn contact-form" value="Submit"> Submit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p> Copyright © Yrmee<span>.</span> Made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
