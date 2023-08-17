@@ -288,7 +288,7 @@ footer .footer span a:hover {
         right: 20px;
         width: 40px;
         height: 40px;
-        background:#EB6953 url(/projects/CSS_Animations/images/menu.png);
+        background:#EB6953 url(/Portfolio_FrontEnd/projects/CSS_Animations/images/menu.png);
         background-size: 40px;
         background-repeat: no-repeat;
         background-position: center;
@@ -297,7 +297,7 @@ footer .footer span a:hover {
         border-radius: 5px;
     }
     .toggle.active {
-        background:#EB6953 url(/projects/CSS_Animations/images/close.png);
+        background:#EB6953 url(/Portfolio_FrontEnd/projects/CSS_Animations/images/close.png);
         background-size: 35px;
         background-repeat: no-repeat;
         background-position: center;       
