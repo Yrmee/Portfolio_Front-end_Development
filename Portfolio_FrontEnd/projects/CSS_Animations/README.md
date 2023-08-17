@@ -1,22 +1,26 @@
-# Showcase Landingpage - Animated Design
+# CSS Animations
+An additional feature with CSS are animated texts and images as soon as the web page loads. To showcase what I can do with CSS animations for a web page or web application, I created this fictional Food Blog project as an example.
 
-## How and Why I arrived at this chosen layout.
+> Note: This showcase web page is not functional. 
 
-Text Here about; explaining how you arrived at your chosen layout is just as important as having an aesthetically appealing design.
+## Features
+* Responsive Web Page
+* Animated Navigation Bar
+* Animated Title
+* Animated Text
+* Animated Social Icons
+* Animated Social Media Icons
 
-You can go further and describe the steps you took to ensure your website followed the best developer practices. For example, share how you focused on improving the SEO and performance of your site.
+## Technologies
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* GitHub
 
-### Things to think about to mention:
-- Explain your choice of color scheme.
-- Explain your choice of Animation.
-- What inspired you?
-- Why do you want to showcase this knowledge?
+## Sources
+* [Food image](https://freepik.com)
+* [Social Media icons](https://www.flaticon.com/)
+* [Menu & Close icons](https://www.flaticon.com/)
 
-### Share your color-code in a table
-| Description | CSS Color Code |
-| ----------- | -------------- |
-| background  | #FFF           |
-| black       | #FFF           |
-| green       | #FFF           |
-| red         | #FFF           |
-| gray        | #FFF           |
+## Project Visuals
+![](/Portfolio_FrontEnd/projects/CSS_Animations/images/CSS_Animations.png)
