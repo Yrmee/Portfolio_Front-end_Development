@@ -11,7 +11,7 @@ Out of curiousity how they are build and work, I created this Model Box for a We
 * GitHub
 
 ## Sources
-* [freepik.com](https://freepik.com/)
+* [Beauty & Lifestyle Photo](https://freepik.com/)
 * [Google Font Family](https://fonts.google.com/specimen/Dosis)
 
 
