@@ -14,7 +14,7 @@ One of the million things I'm interested in is the galaxy, the universe and ever
 * Design Elements:
     * High quality video background
 
-## Technologies used
+## Technologies
 * HTML5
 * CSS3
 * GitHub
