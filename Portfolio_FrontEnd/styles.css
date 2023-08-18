@@ -23,11 +23,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* trial and error for mobile fixed background settings
-    height: 100%;
-    background: url(./images/coffee_background_small.jpg) no-repeat center left fixed;
-    background-size: cover;
-    */
 }
 
 body {
@@ -465,10 +460,6 @@ p {
 @media only screen and (min-width: 515px) and (max-width: 768px) {
 
     html {
-        /* trial and error voor background settings ipad
-        background: url(./images/background.jpg) no-repeat center right fixed;
-        background-size: cover;
-        */
         scroll-behavior: smooth;
     }
 
